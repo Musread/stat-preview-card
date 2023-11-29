@@ -1,0 +1,40 @@
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-saturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+
+  --white: hsl(0, 0%, 100%);
+  --transparent-white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --transparent-white-headings: hsla(0, 0%, 100%, 0.6);
+
+  --background-overlay: hsla(277, 84%, 26%, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+
+  @include respond {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-size: 1.5rem;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+
+  @include respond {
+    height: 100%;
+  }
+}

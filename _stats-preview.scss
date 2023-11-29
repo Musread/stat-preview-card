@@ -1,0 +1,105 @@
+.stats-preview {
+  width: 90rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--dark-saturated-blue);
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  @include respond {
+    width: 90%;
+    margin: 4rem auto 10rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, min-content);
+  }
+
+  &__infos {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    @include respond {
+      grid-row: 2 / -1;
+      text-align: center;
+      padding: 3rem 6rem;
+    }
+  }
+
+  &__header {
+    font-size: 3rem;
+  }
+
+  &__presentation {
+    color: var(--transparent-white-paragraph);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    line-height: 2rem;
+
+    @include respond {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__headings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include respond {
+      grid-template-rows: repeat(3, min-content);
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  &__number {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    font-size: 1rem;
+    color: var(--transparent-white-headings);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &__background {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        0deg,
+        var(--background-overlay),
+        var(--background-overlay) 100%
+      ),
+      url("images/image-header-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include respond {
+      grid-row: 1 / 2;
+      height: 30rem;
+      background-image: linear-gradient(
+          0deg,
+          var(--background-overlay),
+          var(--background-overlay) 100%
+        ),
+        url("images/image-header-mobile.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  // &__img {
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  // }
+}
